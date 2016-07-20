@@ -3,7 +3,6 @@ package com.ricky.codelab.jersey.resource;
 import com.ricky.codelab.jersey.domain.User;
 import com.ricky.codelab.jersey.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -16,18 +15,12 @@ import java.util.List;
  * @author Ricky Fung
  * @create 2016-07-20 14:28
  */
-@Component
 @Path("/user")
 public class UserResource {
 
     @Autowired
     private IUserService userService;
 
-    /**
-     * Create a single resource with POST
-     * @param user
-     * @return
-     */
     @POST
     @Consumes({ MediaType.APPLICATION_JSON })
     @Produces({ MediaType.TEXT_HTML })
@@ -45,7 +38,7 @@ public class UserResource {
     @POST
     @Consumes({ MediaType.APPLICATION_FORM_URLENCODED })
     @Produces({ MediaType.TEXT_HTML })
-    public Response createPodcastFromApplicationFormURLencoded(
+    public Response createUserApplicationFormURLencoded(
             @FormParam("name") String name,
             @FormParam("age") Integer age) {
 
@@ -65,7 +58,7 @@ public class UserResource {
 
     //http://localhost:8080/user/1
     @GET
-    @Path("{id}")
+    @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public User getUserById(@PathParam("id") Long id) {
 
@@ -73,6 +66,7 @@ public class UserResource {
     }
 
     @GET
+    @Path("/list")
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getUserList() {
 
