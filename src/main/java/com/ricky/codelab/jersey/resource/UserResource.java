@@ -56,7 +56,6 @@ public class UserResource {
                                 + String.valueOf(id)).build();
     }
 
-    //http://localhost:8080/user/1
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -120,7 +119,7 @@ public class UserResource {
     @DELETE
     @Path("{id}")
     @Produces({ MediaType.TEXT_HTML })
-    public Response deletePodcastById(@PathParam("id") Long id) {
+    public Response deleteUserById(@PathParam("id") Long id) {
         userService.deleteById(id);
         return Response.status(Response.Status.NO_CONTENT)
                 .entity("User successfully removed from database").build();

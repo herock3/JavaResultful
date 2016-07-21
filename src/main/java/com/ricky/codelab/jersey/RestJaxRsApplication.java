@@ -1,5 +1,6 @@
 package com.ricky.codelab.jersey;
 
+import com.ricky.codelab.jersey.resource.OrderResource;
 import com.ricky.codelab.jersey.resource.UserResource;
 import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -20,6 +21,7 @@ public class RestJaxRsApplication extends ResourceConfig {
 
         // register application resources
         this.register(UserResource.class);
+        this.register(OrderResource.class);
 
         // register filters
         register(RequestContextFilter.class);
