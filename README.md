@@ -1,2 +1,2 @@
-# jersey-samples
-Jersey2+Spring4.2+Tomcat 7 Demo
+# restful-framework-samples
+Java RESTful Framework samples code such as [Jersey](https://jersey.java.net/) and [RESTEasy](http://resteasy.jboss.org/).
