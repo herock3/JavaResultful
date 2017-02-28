@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bytebeats.restful</groupId>
-    <artifactId>restful-framework-showcase</artifactId>
+    <artifactId>restful-framework-tutorial</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <name>restful-framework-showcase</name>
+    <name>restful-framework-tutorial</name>
     <url>http://maven.apache.org</url>
 
 	<modules>
